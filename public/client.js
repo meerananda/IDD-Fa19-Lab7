@@ -10,6 +10,10 @@ Usage: This file is called automatically when the webpage is served.
 
 //--Addition. Added a button handling for the `Take a picture` button.
 */
+function playSound(url) {
+    var a = new Audio(url);
+    a.play();
+}
 
 // WebSocket connection setup
 var socket = io();
@@ -41,6 +45,8 @@ socket.on('server-msg', function(msg) {
   console.log('msg:', msg);
   switch (msg) {
     case "light":
+      takePicture();
+      playSound("https://www.soundjay.com/door/sounds/doorbell-1.mp3");
       document.body.style.backgroundColor = "white";
       console.log("white")
       break;
