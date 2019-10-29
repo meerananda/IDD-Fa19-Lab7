@@ -16,7 +16,9 @@
 
 ## Part B. Web Camera
 
-**a. Compare `helloYou/server.js` and `IDD-Fa18-Lab7/pictureServer.js`. What elements had to be added or changed to enable the web camera? (Hint: It might be good to know that there is a UNIX command called `diff` that compares files.)**
+**a. Compare `helloYou/server.js` and `IDD-Fa18-Lab7/pictureServer.js`. What elements had to be added or changed to enable the web camera? (Hint: It might be good to know that there is a UNIX command called `diff` that compares files.)**\
+
+The main difference between the two files is that the pictureServer.js includes a Node Webcam variable to control the external webcam, and includes a snippet of code to set this up. There is also an additional function in pictureServer.js to take the picture, which is not in the helloYou/server.js since that one is simply to show that the button click is being registered. 
 
 **b. Include a video of your working video doorbell**
 
